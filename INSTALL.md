@@ -4,28 +4,28 @@
 
 ### Step 1: Purchase a Subscription
 
-Visit [hurtzdonut.com](https://hurtzdonut.com) and select your tier:
+Visit [hurtzdonut.com/back-the-build](https://hurtzdonut.com/back-the-build) and select your tier:
 
 | Tier | MSRP | Founder Price | Seats | Best For |
 |------|------|---------------|-------|----------|
 | **Solo** | $79/mo | **$35/mo** | 1 | Solo developers getting started with AI game asset production |
 | **Duo** | $139/mo | **$65/mo** | 2 | Developers working with a partner or collaborator |
-| **Studio** | $249/mo | **$149/mo** | 5 | Studios and teams who need multiple seats and priority support |
+| **Studio** | $249/mo | **$149/mo** | 5 | Studios and teams who need multiple seats, priority support, and pipeline customization |
 | **Enterprise** | Custom | Custom | Custom | Dedicated support, custom integrations, SLA |
 
-All tiers include the full MCP package — all 250 tools across all 10 servers. **Founder pricing is locked forever** at your signup rate — prices go to MSRP at general availability.
+All tiers include the full MCP package — all 565 tools across all 16 servers, all 50 AI agents, and all workflow knowledge documents. **Founder pricing is locked forever** at your signup rate — prices go to MSRP at general availability.
 
 ### Step 2: Complete Checkout & Get Your License Key
 
-After selecting your tier, you'll be taken to checkout. Once payment completes:
+After selecting your tier, you will be taken to Stripe checkout. Once payment completes:
 
 1. Your license key is **automatically generated** and displayed on the success page
-2. You'll see download buttons for your platform (Windows, macOS, Linux)
-3. **Copy your license key immediately** — you'll also receive it via email as a backup
+2. You will see download buttons for your platform (Windows, macOS, Linux)
+3. **Copy your license key immediately** — you will also receive it via email as a backup
 
 ### Step 3: Download & Install the MCP Package
 
-Click the download button for your operating system. The package includes an `INSTALL_PROMPT.md` file — paste its contents into your AI agent (Claude Code, Cursor, or Windsurf) and the agent will walk you through the complete setup automatically.
+Click the download button for your operating system on the success page. The installer package includes an `INSTALL_PROMPT.md` file — paste its contents into your AI agent (Claude Code, Cursor, or Windsurf) and the agent will walk you through the complete setup automatically.
 
 **Supported platforms:**
 
@@ -43,31 +43,31 @@ Before running the MCP package, ensure you have the following installed:
 
 | Software | Version | Download |
 |----------|---------|----------|
-| Blender | 4.0+ | [blender.org/download](https://blender.org/download) |
-| Unreal Engine | 5.3+ | [unrealengine.com/download](https://unrealengine.com/download) |
-| Python | 3.10+ | [python.org/downloads](https://python.org/downloads) |
-| Node.js | 18+ | [nodejs.org](https://nodejs.org) |
-| MCP-compatible AI agent | Latest | Claude Code, Cursor, or Windsurf |
+| Blender | 4.0+ | [blender.org/download](https://www.blender.org/download/) |
+| Unreal Engine | 5.3+ | [unrealengine.com/download](https://www.unrealengine.com/download) |
+| Python | 3.10+ | [python.org/downloads](https://www.python.org/downloads/) |
+| Node.js | 18+ | [nodejs.org](https://nodejs.org/) |
+| MCP-compatible AI agent | Latest | [Claude Code](https://claude.ai/code), [Cursor](https://cursor.sh/), or [Windsurf](https://windsurf.ai/) |
 
 #### Optional — Substance Suite (Adobe Subscription)
 
 These improve texture and material quality but are **not required**. The pipeline works without them.
 
-| Software | Purpose |
-|----------|---------|
-| Substance Painter | Texture painting, mesh map baking |
-| Substance Designer | Procedural material graph authoring |
-| Substance Sampler | Photo-to-material scanning |
+| Software | Purpose | Info |
+|----------|---------|------|
+| Substance Painter | Texture painting, mesh map baking | [Adobe Substance](https://www.adobe.com/products/substance3d.html) |
+| Substance Designer | Procedural material graph authoring | [Adobe Substance](https://www.adobe.com/products/substance3d.html) |
+| Substance Sampler | Photo-to-material scanning | [Adobe Substance](https://www.adobe.com/products/substance3d.html) |
 
 #### Optional — AI Backends (All Free, Open Source)
 
 These enable AI-powered rigging and animation. They require an NVIDIA GPU with CUDA support.
 
-| Backend | What It Does | GPU Requirement |
-|---------|-------------|-----------------|
-| UniRig | AI auto-rigging (skeleton + skin weights) | 8GB+ VRAM |
-| HY-Motion | AI locomotion animation | 24GB+ VRAM |
-| AnimationGPT | AI combat animation | CUDA GPU |
+| Backend | What It Does | GPU Requirement | Source |
+|---------|-------------|-----------------|--------|
+| UniRig | AI auto-rigging (skeleton + skin weights) | 8GB+ VRAM | [GitHub — VAST-AI-Research/UniRig](https://github.com/VAST-AI-Research/UniRig) |
+| HY-Motion | AI locomotion animation | 24GB+ VRAM | [GitHub — Tencent](https://github.com/Tencent) |
+| AnimationGPT | AI combat animation | CUDA GPU | [GitHub](https://github.com/) |
 
 ### Step 5: Define Your Game
 
@@ -79,15 +79,15 @@ On first run, the AI will walk you through defining your game project — genre,
 
 Before your first session, verify:
 
-- Blender 4.0+ installed and launchable
-- Unreal Engine 5.3+ installed with a project created
-- Python 3.10+ installed (`python --version` in terminal)
-- Node.js 18+ installed (`node --version` in terminal)
-- MCP-compatible AI agent installed (Claude Code, Cursor, or Windsurf)
-- License key obtained from checkout success page
-- MCP package downloaded and extracted
-- (Optional) Substance apps installed with bridge plugins loaded
-- (Optional) UniRig / HY-Motion / AnimationGPT installed for AI rigging and animation
+- [ ] Blender 4.0+ installed and launchable
+- [ ] Unreal Engine 5.3+ installed with a project created
+- [ ] Python 3.10+ installed (`python --version` in terminal)
+- [ ] Node.js 18+ installed (`node --version` in terminal)
+- [ ] MCP-compatible AI agent installed (Claude Code, Cursor, or Windsurf)
+- [ ] License key obtained from checkout success page
+- [ ] MCP package downloaded and extracted
+- [ ] (Optional) Substance apps installed with bridge plugins loaded
+- [ ] (Optional) UniRig / HY-Motion / AnimationGPT installed for AI rigging and animation
 
 ---
 
@@ -101,7 +101,7 @@ Before your first session, verify:
 | Storage | SSD, 50GB free | NVMe SSD, 100GB+ free |
 | OS | Windows 10/11, macOS 12+, Ubuntu 22.04+ | Windows 11 or Ubuntu 22.04+ |
 
-> **Note:** AI backends (UniRig, HY-Motion, AnimationGPT) require NVIDIA CUDA GPUs. AMD GPUs are not currently supported for AI rigging and animation. The core pipeline (Blender, Substance, UE5 automation) works on any GPU.
+> **Note:** AI backends (UniRig, HY-Motion, AnimationGPT) require NVIDIA CUDA GPUs. AMD GPUs are not currently supported for AI rigging and animation. The core MCP pipeline (Blender, Substance, UE5 automation) works on any GPU.
 
 ---
 

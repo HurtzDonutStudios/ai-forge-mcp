@@ -1,8 +1,8 @@
 # AI Forge MCP Package
 
-**AI Forge MCP Package — 278 AI-callable tools across 11 MCP servers. Full-pipeline AAA game asset production platform. Controls Blender, Substance Suite, and Unreal Engine 5. 248,000+ lines of production code.**
+**AI Forge MCP Package — 565 AI-callable tools across 16 MCP servers. Full-pipeline AAA game asset production platform. Controls Blender, Substance Suite, Maya, Houdini, and Unreal Engine 5. 248,000+ lines of production code.**
 
-278 AI-callable tools across 11 MCP servers controlling Blender, Substance Painter, Substance Designer, Substance Sampler, and Unreal Engine 5 — unified under a single AI agent. 248,000+ lines of production code. 50 specialized AI agents. One prompt in, game-ready asset out.
+565 AI-callable tools across 16 MCP servers controlling Blender, Substance Painter, Substance Designer, Substance Sampler, Maya, Houdini, and Unreal Engine 5 — unified under a single AI agent. 248,000+ lines of production code. 50 specialized AI agents. 9 workflow knowledge documents. ForgeAnimHelper C++ plugin for Animation Blueprint automation. One prompt in, game-ready asset out.
 
 > **Early Access** — AI Forge is built and actively used by a solo developer to create AI Legends (a horror fantasy MMO). New features, tools, and services are shipping continuously. I haven't had the chance to test everything yet — please join the [Discord](https://discord.gg/PDHAtHhumc) to give feedback, report bugs, and help shape the product.
 
@@ -36,7 +36,7 @@ ForgeRoom is the command center for the AI Forge pipeline. Available as a native
 
 **Desktop app features:**
 
-- **Forge Daemon** background service managing all 11 MCP servers and up to 50 concurrent AI agent sessions
+- **Forge Daemon** background service managing all 16 MCP servers and up to 50 concurrent AI agent sessions
 - Real-time pipeline monitoring with live progress updates
 - **Three.js 3D asset viewer** with ACES filmic tone mapping, PBR rendering, and annotation system
 - **Rig Inspector** with bone quality scoring and test poses (T-Pose, A-Pose, Idle, Walk, Run, Attack, Death)
@@ -53,35 +53,66 @@ Pipeline documentation and agent prompts are delivered to the AI's context windo
 
 ## 50-Agent AI Studio
 
-AI Forge includes 50 specialized AI agents that can work concurrently on your game:
+AI Forge includes 50 specialized AI agents organized across 10 departments that can work concurrently on your game:
 
-**Lead Agents (Claude Opus):** Sovereign (orchestrator), Warden (security), Architect (project planning)
+**Lead Agents (Claude Opus — 4 agents):** Sovereign (orchestrator), Warden (security), Architect (project planning), Forgemaster (asset pipeline lead)
 
-**Specialist Agents (Claude Sonnet):** Sculptor (mesh), Alchemist (materials), Bladedancer (combat animation), Worldsmith (environments), Dreamweaver (narrative), Luminary (lighting), Voiceshaper (dialogue/lipsync), and more
+**Specialist Agents (Claude Sonnet — ~35 agents):** Sculptor (mesh), Alchemist (materials), Bladedancer (combat animation), Worldsmith (environments), Dreamweaver (narrative), Luminary (lighting), Voiceshaper (dialogue/lipsync), Renderer (quality), Visionary (creative direction), Sentinel (security monitoring), and more across Art 3D, Animation, Engineering, Game Design, and Audio departments
 
-**Support Agents (Claude Haiku):** Quartermaster (inventory), Benchmark (performance), Lorekeeper (documentation), Scribe (specs), and more
+**Support Agents (Claude Haiku — ~12 agents):** Quartermaster (inventory), Benchmark (performance), Grinder (batch processing), Gatekeeper (quality gates), Foundry (asset processing), Archivist (documentation), Conduit (pipeline routing), Bastion (security enforcement), Herald (notifications), Oracle (knowledge base), and more across QA, DevOps, and Marketing departments
 
 Customers choose their team size based on workflow: 3 agents for focused work, 10 for steady production, or 50 for maximum throughput. No feature gating — team size is your choice, not a paywall.
 
 ---
 
-## The 11 MCP Servers
+## The 16 MCP Servers
 
 | Server | Tools | What It Controls |
 |--------|-------|-----------------|
-| **ForgeBlender** | 97 | Blender — mesh cleanup, UV unwrapping, materials, rigging, LOD generation, cinematic texture enhancement, physics simulation, animation, FBX/GLB export |
-| **GameForge** | 74 | Unreal Engine 5 — world building, material instances, VFX (Niagara), PCG, lighting, landscape sculpting, audio, cinematics (Sequencer) |
-| **ForgeDesigner** | 25 | Substance Designer — procedural graph creation, node manipulation, noise chains, texture generation, material export, .sbsar publishing |
-| **ForgePainter** | 17 | Substance Painter — project creation, layer management, smart materials, mesh map baking (AO, curvature, normal, thickness), texture export |
-| **ForgeSampler** | 8 | Substance Sampler — photo-to-material scanning, environment capture, PBR material extraction |
+| **GameForge** | 192 | Unreal Engine 5 — asset import, materials, VFX (Niagara), PCG, landscapes, world building, cinematics (Sequencer), Animation Blueprints, Gameplay Ability System, behavior trees, multiplayer replication, LiveLink, ForgeAnimHelper bridge |
+| **ForgeBlender** | 185 | Blender — mesh cleanup, UV unwrapping, materials, rigging, LOD generation, cinematic texture enhancement, physics simulation, animation, cloth/hair/fluid sim, NVIDIA destruction, modular building kits, PolyHaven integration, batch pipeline orchestration, FBX/GLB/Alembic export |
+| **ForgePainter** | 34 | Substance Painter — project creation, layer management, smart materials, generators, mesh map baking (AO, curvature, normal, thickness), texture export, channel previews |
+| **ForgeDesigner** | 32 | Substance Designer — procedural graph creation, node manipulation, noise chains, texture generation, material export, .sbsar publishing, parameter exposure |
+| **ForgeRoom** | 28 | ForgeRoom UI bridge — state management, navigation, notifications, progress tracking, asset/document management, pipeline orchestration, project settings, art direction |
+| **ForgeMaya** | 20 | Autodesk Maya — scene management, mesh cleanup, UV unwrapping, materials, joint chains, skin binding, animation, FBX/OBJ export |
+| **ForgeHoudini** | 20 | SideFX Houdini — procedural generation, heightfields, VEX wrangling, simulations (RBD, FLIP, Pyro, Vellum), terrain erosion, HDA creation, UE5 export |
+| **ForgeSampler** | 8 | Substance Sampler — photo-to-material scanning, batch processing, PBR material extraction, SAT CLI integration |
 | **ForgeMotion** | 7 | Animation — text-to-locomotion via HY-Motion (Tencent), text-to-combat via AnimationGPT, species-adapted motion physics |
 | **ForgeRig** | 6 | Rigging — automatic skeleton prediction and skin weight generation via UniRig (VAST-AI, SIGGRAPH 2025) |
-| **ForgeNPC** | 6 | NPC Systems — dialogue generation, personality profiles, interrogation trees, speech-to-text integration |
-| **ForgeVoice** | 6 | Lipsync — facial animation generation, emotion classification, UE5 morph target export, batch processing |
-| **ForgeRoom** | 28 | ForgeRoom UI bridge — state management, navigation, notifications, progress tracking, asset/document management, pipeline orchestration | Local stdio |
+| **ForgeVoice** | 6 | Lipsync — facial animation generation via NVIDIA Audio2Face, emotion classification, UE5 morph target export, batch processing |
+| **ForgeNPC** | 6 | NPC Systems — dialogue generation via NVIDIA ACE, personality profiles, interrogation trees, speech-to-text/text-to-speech integration |
+| **ForgeAI** | 6 | ForgeAI — pipeline guidance, troubleshooting, code review, asset spec generation via locally-hosted Ollama model |
+| **ForgeKnowledge** | 6 | Knowledge Base — TF-IDF search across 166 training documents, agent profiles, pipeline references |
+| **ForgePool** | 5 | DCC Pool Manager — instance acquisition/release, pool scaling, health checks across all DCC application pools |
 | **ForgeHunyuan** | 4 | 3D Generation — text-to-mesh and image-to-mesh via Hunyuan3D (Tencent), batch processing, LOD-aware output |
 
-**Total: 278 tools | 11 servers | 248,000+ lines of production code**
+**Total: 565 tools | 16 servers | 248,000+ lines of production code**
+
+---
+
+## ForgeAnimHelper — Animation Blueprint Automation (New)
+
+AI Forge includes **ForgeAnimHelper**, a custom UE5 C++ Editor plugin (1,169 lines) that enables full AI automation of Animation Blueprints — something no other AI game dev platform can do.
+
+ForgeAnimHelper exposes AnimGraph and Event Graph manipulation to Python, allowing the MCP pipeline to create complete Animation Blueprints in a single tool call: state machines, blend spaces, locomotion setups, transition conditions, and Event Graph variable caching — all wired automatically.
+
+The plugin supports transition condition parsing (`Speed > 10.0`, `bIsInAir`, `!bIsInAir`, `AutomaticRule`), per-bone blend profiles, sync groups, and full compilation with error reporting. Four bridge tools in GameForge (`wire_abp_animgraph`, `wire_abp_event_graph`, `create_complete_abp`, `compile_abp`) connect the C++ plugin to the MCP pipeline.
+
+---
+
+## 9 Workflow Knowledge Documents (New)
+
+AI Forge now ships with 9 comprehensive workflow documents (~260KB total) that serve as pipeline reference guides for the AI agents:
+
+1. **AI Enemy Pipeline** — Behavior Trees, Blackboards, Gameplay Ability System, ragdoll integration
+2. **Advanced Asset Pipeline** — Retopology, baking, texturing, rigging, LOD chain generation
+3. **Horror VFX Techniques** — Blood, chains, fog, organic horror effects with Niagara and Blender
+4. **Game Systems Blueprint** — Combat, inventory, loot tables, quest systems, dialogue trees
+5. **Multiplayer Setup** — Actor replication, Epic Online Services, net frequency tuning
+6. **Cinematic Pipeline** — Level Sequencer, cameras, lighting rigs, post-processing
+7. **Optimization Guide** — LOD strategies, Nanite, draw call optimization, profiling
+8. **Blender Simulation** — Cloth, hair, fluid, rigid body, ocean simulation workflows
+9. **Animation Blueprint** — ABP architecture, ForgeAnimHelper automation, template fallback workflows
 
 ---
 
@@ -99,14 +130,15 @@ Step 5:  Texture Enhancement ............... ForgePainter bakes mesh maps + Forg
 Step 6:  Rigging ........................... ForgeRig auto-generates skeleton via UniRig AI
 Step 7:  Weight Painting ................... ForgeBlender optimizes weights — edge loops, pruning, symmetry, deformation testing
 Step 8:  Animation ......................... ForgeMotion generates locomotion (HY-Motion) + combat (AnimationGPT)
-Step 9:  NPC Dialogue & Lipsync ............ ForgeNPC generates dialogue, ForgeVoice creates lipsync animations
-Step 10: LOD Generation .................... ForgeBlender creates multi-level-of-detail chain for performance
-Step 11: UE5 Delivery ...................... GameForge imports into Unreal Engine 5 with materials, LODs, and collision
+Step 9:  Animation Blueprint ............... GameForge + ForgeAnimHelper auto-wires ABP with state machines and blend spaces
+Step 10: NPC Dialogue & Lipsync ............ ForgeNPC generates dialogue, ForgeVoice creates lipsync animations
+Step 11: LOD Generation .................... ForgeBlender creates multi-level-of-detail chain for performance
+Step 12: UE5 Delivery ...................... GameForge imports into Unreal Engine 5 with materials, LODs, and collision
 ```
 
 **Input:** A .glb file + a reference image + a plain-English description of what you want.
 
-**Output:** A fully rigged, textured, animated, lip-synced, UE5-ready asset with LODs, collision, and proper material setup.
+**Output:** A fully rigged, textured, animated, lip-synced, UE5-ready asset with LODs, collision, Animation Blueprint, and proper material setup.
 
 ---
 
@@ -176,9 +208,9 @@ Multiplayer server infrastructure wizard. 4-step guided setup: Multiplayer Type,
 
 ---
 
-## The 6 AI Backends (+ NVIDIA ACE Coming Soon)
+## The 7 AI Backends (Including NVIDIA ACE)
 
-This pipeline integrates six AI systems, each handling what it does best. We believe in full transparency about what powers the work. NVIDIA ACE integration for advanced NPC intelligence is in development.
+This pipeline integrates seven AI systems, each handling what it does best. We believe in full transparency about what powers the work.
 
 ### Grok by xAI — Concept Art Generation
 All reference images and concept art can be generated using xAI's Grok. High-quality visual direction that feeds directly into the 3D pipeline. Used commercially under X/xAI Terms of Service with attribution.
@@ -195,8 +227,11 @@ GPT-based auto-rigger that predicts skeleton hierarchies and skin weights from r
 ### AnimationGPT — AI Combat Animation
 Combat-specialized motion model with 8,700 combat animations and 26,100 text annotations tagged by weapon type, attack type, speed, and power. Generates contextual combat sequences from plain-English descriptions.
 
+### NVIDIA ACE — NPC Intelligence & Voice
+NVIDIA ACE powers the NPC dialogue system (ForgeNPC) with personality profiles, contextual responses, and interrogation trees. NVIDIA Audio2Face (ForgeVoice) generates lip-sync animations with emotion classification. NVIDIA Riva provides speech-to-text and text-to-speech for real-time NPC voice interaction.
+
 ### Claude by Anthropic — Pipeline Orchestration
-The AI coding agent that ties everything together. Claude reads the pipeline configuration, calls tools across all 11 MCP servers, makes creative decisions based on the reference image, and delivers finished assets. Claude is the creative director — the MCP servers are its tools. With the 50-agent studio, Claude powers an entire team of specialized AI agents working concurrently on your game.
+The AI coding agent that ties everything together. Claude reads the pipeline configuration, calls tools across all 16 MCP servers, makes creative decisions based on the reference image, and delivers finished assets. Claude is the creative director — the MCP servers are its tools. With the 50-agent studio, Claude powers an entire team of specialized AI agents working concurrently on your game.
 
 ---
 
@@ -219,7 +254,7 @@ Each profile is customizable. Customers can modify existing profiles or create n
 The package supports five distinct asset production pipelines, each with specialized tool chains:
 
 ### Characters (Playable)
-32-bone extended skeleton with finger bones, bilateral symmetry enforcement, anatomical proportion validation, facial rig for lipsync, full locomotion + combat animation suite.
+32-bone extended skeleton with finger bones, bilateral symmetry enforcement, anatomical proportion validation, facial rig for lipsync, full locomotion + combat animation suite, automatic Animation Blueprint with ForgeAnimHelper.
 
 ### Creatures & NPCs
 24-bone skeleton, species-specific animation profiles, weight class physics, NPC dialogue generation, personality profiles, lipsync support for speaking NPCs.
@@ -228,10 +263,10 @@ The package supports five distinct asset production pipelines, each with special
 Geometric correction (blade straightening, symmetry enforcement), rarity-tiered material complexity (common through legendary), grip alignment for character hand bones, physics properties for combat animation.
 
 ### Armor
-Slot-based system (head, chest, legs, feet, hands, shield), material-type classification (metal, leather, cloth, bone), high-poly to low-poly bake workflow, proper weight painting for character deformation.
+Slot-based system (head, chest, legs, feet, hands, shield), material-type classification (metal, leather, cloth, bone), high-poly to low-poly bake workflow, proper weight painting for character deformation, equippable clothing system in UE5.
 
 ### Environments
-Enterable buildings with wall thickness, door and window cutting, stair generation, interior geometry, landscape integration via UE5 PCG, proper lightmap UVs for static lighting.
+Enterable buildings with wall thickness, door and window cutting, stair generation, interior geometry, modular building kits, PCG-based settlement generation, landscape integration via UE5 PCG, proper lightmap UVs for static lighting.
 
 ---
 
@@ -239,12 +274,14 @@ Enterable buildings with wall thickness, door and window cutting, stair generati
 
 | Metric | Value |
 |--------|-------|
-| MCP Servers | 11 custom-built (13 with Maya + Houdini roadmap) |
-| Total AI-Callable Tools | 278 |
+| MCP Servers | 16 custom-built |
+| Total AI-Callable Tools | 565 |
 | Lines of Production Code | 248,000+ |
-| Specialized AI Agents | 50 |
-| Supported Applications | 5 (Blender, Substance Designer, Substance Painter, Substance Sampler, Unreal Engine 5) |
-| AI Backend Integrations | 6 (Grok, Hunyuan3D, UniRig, HY-Motion, AnimationGPT, Claude) |
+| Specialized AI Agents | 50 (across 10 departments) |
+| Supported Applications | 7 (Blender, Substance Designer, Substance Painter, Substance Sampler, Maya, Houdini, Unreal Engine 5) |
+| AI Backend Integrations | 7 (Grok, Hunyuan3D, UniRig, HY-Motion, AnimationGPT, NVIDIA ACE, Claude) |
+| Workflow Knowledge Documents | 9 (~260KB) |
+| ForgeAnimHelper C++ Plugin | 1,169 lines |
 | Species Animation Profiles | 16 (10 playable + 6 creature) |
 | Asset Type Pipelines | 5 (characters, creatures, weapons, armor, environments) |
 | ForgeRoom Dashboard Modules | 10 (Dashboard, Import, Assets, Stat Engine, Projects, Document Forge, 3D Viewer, Rig Inspector, ForgeAnimator, Server Forge) |
@@ -271,8 +308,10 @@ Enterable buildings with wall thickness, door and window cutting, stair generati
 - **Adobe Substance Painter** — Professional texture painting and mesh map baking
 - **Adobe Substance Designer** — Procedural material graph authoring
 - **Adobe Substance Sampler** — Photo-to-material scanning
+- **Autodesk Maya** — For studios with Maya-based pipelines
+- **SideFX Houdini** — For procedural generation and VFX workflows
 
-> **The pipeline works without Substance apps.** The Blender-native cinematic enhancement path produces excellent results on its own. Substance apps elevate the quality further when available.
+> **The pipeline works without Substance, Maya, or Houdini.** The Blender-native cinematic enhancement path produces excellent results on its own. Additional DCC apps elevate the quality further when available.
 
 ### Optional AI Backends (Free, Open Source)
 
@@ -311,7 +350,7 @@ The MCP servers themselves run on CPU and use minimal resources (~50MB RAM per s
 | **Studio** | 5 devs | **$149/mo** | $249/mo |
 | **Enterprise** | Unlimited | Custom | Custom |
 
-All tiers get the full pipeline — all 278 tools, all 11 servers, all 50 agents. No feature gating. Pricing is seat-based only. Student discount and veteran/military discount available. Contact [hurtzdonut.com](https://hurtzdonut.com) for details.
+All tiers get the full pipeline — all 565 tools, all 16 servers, all 50 agents. No feature gating. Pricing is seat-based only. Student discount and veteran/military discount available. Contact [hurtzdonut.com](https://hurtzdonut.com) for details.
 
 ### Early Access — Founder Pricing
 
@@ -330,7 +369,7 @@ Early access subscribers also get:
 
 AI Legends is a horror fantasy MMO being built entirely by the AI Forge MCP Package. Every asset in the game — characters, creatures, weapons, armor, environments — is produced by this pipeline. It serves as the living proof that the system works at production scale.
 
-AI Legends demonstrates the full capability chain: Grok generates concept art, Hunyuan3D creates 3D meshes, ForgeBlender cleans and optimizes geometry, UniRig auto-rigs skeletons, HY-Motion and AnimationGPT generate movement and combat animations, the Substance suite handles materials and textures, ForgeNPC creates dialogue, ForgeVoice generates lipsync, and GameForge delivers everything into Unreal Engine 5.
+AI Legends demonstrates the full capability chain: Grok generates concept art, Hunyuan3D creates 3D meshes, ForgeBlender cleans and optimizes geometry, UniRig auto-rigs skeletons, HY-Motion and AnimationGPT generate movement and combat animations, ForgeAnimHelper auto-wires Animation Blueprints, the Substance suite handles materials and textures, ForgeNPC creates dialogue, ForgeVoice generates lipsync, and GameForge delivers everything into Unreal Engine 5.
 
 One developer. One AI pipeline. One game.
 
@@ -359,19 +398,6 @@ AI Forge uses an 8-layer security chain to protect both our pipeline IP and your
 
 ---
 
-## Roadmap
-
-**Coming Soon:**
-
-- **ForgeMaya** — Maya MCP server for AAA studio pipelines
-- **ForgeHoudini** — Houdini MCP server for procedural VFX workflows
-- **NVIDIA ACE integration** — Advanced NPC intelligence and real-time conversation
-- **ForgeAnimator LiDAR app** — Phone-based motion capture companion app
-
-With Maya and Houdini, the platform reaches **13 MCP servers** covering every major DCC application in professional game development. More features, tools, and services are in active development.
-
----
-
 ## Attribution & Licenses
 
 This product integrates multiple open-source and commercial AI platforms. Full attribution:
@@ -381,9 +407,12 @@ This product integrates multiple open-source and commercial AI platforms. Full a
 - **UniRig by VAST-AI Research** — Open source (SIGGRAPH 2025)
 - **HY-Motion by Tencent** — Open source
 - **AnimationGPT** — Open source (based on MotionGPT + CombatMotion dataset)
+- **NVIDIA ACE / Audio2Face / Riva** — NVIDIA commercial license
 - **Blender** — GNU GPL
 - **Unreal Engine 5** — Epic Games EULA (free until $1M gross revenue)
 - **Substance Suite** — Adobe commercial license (customer provides their own)
+- **Maya** — Autodesk commercial license (customer provides their own)
+- **Houdini** — SideFX commercial license (customer provides their own)
 
 ---
 
