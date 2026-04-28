@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/hurtzdonutstudios-ai-forge-mcp-badge.png)](https://mseep.ai/app/hurtzdonutstudios-ai-forge-mcp)
+
 # AI Forge MCP Package
 
 **AI Forge MCP Package — 565 AI-callable tools across 16 MCP servers. Full-pipeline AAA game asset production platform. Controls Blender, Substance Suite, Maya, Houdini, and Unreal Engine 5. 248,000+ lines of production code.**
